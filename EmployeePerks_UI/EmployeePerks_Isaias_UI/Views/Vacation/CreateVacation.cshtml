@@ -1,0 +1,28 @@
+﻿@section Scripts {
+    <script src="~/js/Pages/Vacation/CreateVacation.js"></script>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Create Vacation Requests</h1>
+</div>
+<div class="form-group" style="width: 40%; margin: auto;">
+    <form id="frmVacation">
+        <div>
+            <label for="startDay">Start Day:</label>
+            <input id="startDay" type="date" class="form-control" />
+        </div>
+        <div>
+            <label for="endDay">End Day:</label>
+            <input id="endDay" type="date" class="form-control" />
+        </div>
+        <div>
+            <label for="txtJustification">Justification:</label>
+            <input id="txtJustification" type="text" class="form-control" />
+        </div>
+        <p />
+        <div class="form-group">
+            <button type="button" class="btn btn-success" id="btnCreate">Enviar</button>
+            <button type="reset" class="btn btn-info" id="btnReset">Limpiar</button>
+        </div>
+    </form>
+</div>

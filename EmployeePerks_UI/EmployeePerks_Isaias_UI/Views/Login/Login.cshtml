@@ -1,0 +1,34 @@
+﻿@model UserLogin
+@{
+    Layout = "../Shared/_Layout_NoMenu.cshtml";
+}
+@section Scripts {
+    <script src="~/js/Pages/Login/Login.js"></script>
+}
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <h2>Employee Perks</h2>
+
+    <div>
+        @if (ViewBag.Message != null) 
+        { 
+           <div id="validations" style="color: red">@ViewBag.Message</div>
+        }
+    </div>
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(u => u.UserName, "User Name:")</td>
+            <td>@Html.TextBoxFor(u => u.UserName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(u=> u.Password, "Password:")</td>
+            <td>@Html.PasswordFor(u=> u.Password)</td>
+        </tr>
+        <tr>
+            <td><button id="btnLogin" type="submit" class="btn btn-success">Login</button></td>
+            <td></td>
+        </tr>
+    </table>
+}
